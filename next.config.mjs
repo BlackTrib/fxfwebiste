@@ -1,14 +1,15 @@
 /** @type {import('next').NextConfig} */
+const isStaticExport = process.env.STATIC_EXPORT === 'true'
+
 const nextConfig = {
-  output: 'export',
-  trailingSlash: true,
+  ...(isStaticExport && { output: 'export', trailingSlash: true }),
   typescript: {
     ignoreBuildErrors: true,
   },
   images: {
     formats: ['image/avif', 'image/webp'],
     minimumCacheTTL: 60 * 60 * 24 * 365, // 1 year cache
-    unoptimized: true, // Required for static export
+    ...(isStaticExport && { unoptimized: true }),
   },
   // Enable experimental features for better performance
   experimental: {
