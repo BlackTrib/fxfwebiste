@@ -136,7 +136,7 @@ export function Navbar() {
                   className={cn(
                     'px-3 py-1.5 rounded-md text-[13px] font-medium transition-colors',
                     pathname === link.href
-                      ? light ? 'text-primary bg-white shadow-sm border border-border/50' : 'text-white bg-white/20'
+                      ? 'text-primary bg-white shadow-sm border border-border/50'
                       : light ? 'text-foreground/70 hover:text-foreground' : 'text-white/70 hover:text-white'
                   )}
                 >

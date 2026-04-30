@@ -1,19 +1,28 @@
 # Enable Rewrite Engine
 RewriteEngine On
+RewriteBase /
 
 # Handle Authorization Header
 RewriteCond %{HTTP:Authorization} .
 RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
 
-# Redirect Trailing Slashes If Not A Folder
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_URI} (.+)/$
-RewriteRule ^ %1 [L,R=301]
+# Don't process directories that exist
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
 
-# Handle Front Controller
-RewriteCond %{REQUEST_FILENAME} !-d
+# Don't process files that exist
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^ - [L]
+
+# Rewrite URLs with trailing slash to version without trailing slash
+RewriteCond %{REQUEST_URI} ^(.+)/$
+RewriteRule ^(.+)/$ /$1 [L,R=301]
+
+# For any non-existent file/folder, try with /index.html (for nested directories)
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^ index.html [L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !^/$
+RewriteRule ^(.+)$ /$1/index.html [L]
 
 # Security Headers
 <IfModule mod_headers.c>

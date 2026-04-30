@@ -51,8 +51,8 @@ const team = [
   {
     name: 'Madalin Ivan',
     role: 'Founder & Project Manager',
-    expertise: ['System Admin', 'PrestaShop', 'WordPress', 'OpenCart', 'Shopify'],
-    desc: 'Fondatorul FXF Web Solution, cu experienta solida in administrarea sistemelor si platformelor e-commerce. Coordoneaza proiectele de la concept la lansare, asigurand livrarea la timp si calitate de top.',
+    expertise: ['System Admin', 'E-Commerce Platform', 'SEO Tehnic'],
+    desc: 'Fondatorul FXF Web Solution, cu experienta solida in administrarea sistemelor si platformelor e-commerce. Coordoneaza proiectele de la concept la lansare, asigurand livrarea la timp si calitatea serviciului prestat.',
   },
   {
     name: 'George Burlibasa',
@@ -63,7 +63,7 @@ const team = [
   {
     name: 'Andrei Palaghia',
     role: 'SEO & Performance Specialist',
-    expertise: ['SEO Tehnic', 'Google Ads', 'Analytics'],
+    expertise: ['SEO Audit', 'Google Ads', 'Analytics'],
     desc: 'Specialist SEO cu experienta vasta in optimizare tehnica si campanii de marketing digital. Gestioneaza strategii SEO si campanii Google Ads cu ROAS de 3-5x, asigurand vizibilitate maxima si conversii optime pentru clientii nostri.',
   },
 ]
@@ -157,7 +157,7 @@ export default function DespreNoi() {
                   combină excelență tehnică cu strategie de business solidă.
                 </p>
                 <p className="text-muted-foreground text-sm leading-relaxed">
-                  Într-o piață dominată de promisiuni vagi, FXF se diferențiază prin transparență, 
+                  Într-o piață dominat�� de promisiuni vagi, FXF se diferențiază prin transparență, 
                   responsabilitate și rezultate concrete documentate.
                 </p>
               </div>
