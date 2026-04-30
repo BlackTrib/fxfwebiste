@@ -6,21 +6,23 @@ RewriteBase /
 RewriteCond %{HTTP:Authorization} .
 RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
 
-# Don't rewrite files or directories that exist
-RewriteCond %{REQUEST_FILENAME} -f [OR]
+# Don't process directories that exist
 RewriteCond %{REQUEST_FILENAME} -d
 RewriteRule ^ - [L]
 
-# Rewrite URLs with trailing slash to version without trailing slash (for static files)
-RewriteCond %{REQUEST_FILENAME} !-d
+# Don't process files that exist
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^ - [L]
+
+# Rewrite URLs with trailing slash to version without trailing slash
 RewriteCond %{REQUEST_URI} ^(.+)/$
 RewriteRule ^(.+)/$ /$1 [L,R=301]
 
-# Route all requests to index.html for client-side routing
+# For any non-existent file/folder, try with /index.html (for nested directories)
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_URI} !^/\.well-known/
-RewriteRule ^ /index.html [L]
+RewriteCond %{REQUEST_URI} !^/$
+RewriteRule ^(.+)$ /$1/index.html [L]
 
 # Security Headers
 <IfModule mod_headers.c>
