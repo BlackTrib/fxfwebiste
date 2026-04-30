@@ -190,7 +190,7 @@ export default function RootLayout({
               itemOffered: {
                 '@type': 'Service',
                 name: 'Magazine Online E-Commerce',
-                description: 'Dezvoltare platforme e-commerce complete cu WooCommerce sau soluții custom.',
+                description: 'Dezvoltare magazin e-commerce complet cu PrestaShop sau alte platforme.',
               },
             },
             {

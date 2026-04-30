@@ -35,8 +35,8 @@ export function SEOContent() {
               <p>
                 Echipa noastră de developeri și designeri creează website-uri moderne, responsive și optimizate 
                 pentru motoarele de căutare (SEO). Folosim tehnologii de ultimă generație precum React, Next.js, 
-                WordPress și WooCommerce pentru a livra proiecte de înaltă calitate care generează rezultate 
-                măsurabile: mai mult trafic, mai multe conversii și mai multe vânzări.
+                WordPress, PrestaShop, OpenCart, Shopify și WooCommerce pentru a livra proiecte de înaltă calitate 
+                care generează rezultate măsurabile: mai mult trafic, mai multe conversii și mai multe vânzări.
               </p>
               <p>
                 Colaborăm cu clienți din diverse industrii: e-commerce, medical, B2B, SaaS, retail, HoReCa 
