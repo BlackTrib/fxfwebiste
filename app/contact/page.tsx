@@ -68,22 +68,27 @@ export default function ContactPage() {
     setCaptchaError(false)
     setLoading(true)
     try {
-      const response = await fetch('/api/contact', {
+      // Using Web3Forms for static hosting compatibility
+      const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(form),
+        body: JSON.stringify({
+          access_key: 'YOUR_WEB3FORMS_KEY', // Replace with your Web3Forms access key
+          subject: `Solicitare nouă de la ${form.name} - FXF.ro`,
+          from_name: 'FXF Website',
+          ...form,
+        }),
       })
       
       const data = await response.json()
       
-      if (response.ok) {
+      if (data.success) {
         setSent(true)
         setForm({ name: '', email: '', phone: '', company: '', service: '', budget: '', message: '' })
       } else {
-        alert(data.error || 'Eroare la trimitere. Încearcă din nou.')
+        alert('Eroare la trimitere. Încearcă din nou.')
       }
     } catch (error) {
-      console.error('Error:', error)
       alert('Eroare la conexiune. Încearcă din nou.')
     } finally {
       setLoading(false)
