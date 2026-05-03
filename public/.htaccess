@@ -35,6 +35,16 @@ RewriteRule ^(.+)$ /$1/index.html [L]
 # Enable Gzip Compression
 <IfModule mod_deflate.c>
     AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json
+    # Add brotli if available (faster than gzip)
+    <IfModule mod_brotli.c>
+        AddType "text/html; charset=UTF-8" .html
+        AddEncoding br .br
+    </IfModule>
+</IfModule>
+
+# Add compression type to response header
+<IfModule mod_headers.c>
+    Header append Vary: Accept-Encoding
 </IfModule>
 
 # Cache Control for static assets

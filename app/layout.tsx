@@ -224,6 +224,9 @@ export default function RootLayout({
         {/* DNS prefetch for external resources */}
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        {/* Preload critical images */}
+        <link rel="preload" as="image" href="/og-image.jpg" type="image/jpeg" />
+        <link rel="preload" as="image" href="/logo.png" type="image/png" />
         {/* Resource hints for better loading priority */}
         <meta name="format-detection" content="telephone=no" />
         <script

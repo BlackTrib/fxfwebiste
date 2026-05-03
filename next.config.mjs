@@ -14,6 +14,7 @@ const nextConfig = {
   // Enable experimental features for better performance
   experimental: {
     optimizeCss: true,
+    optimizePackageImports: ['@radix-ui/react-dropdown-menu', '@radix-ui/react-dialog'],
   },
   // Security headers
   async headers() {
