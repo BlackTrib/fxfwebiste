@@ -235,7 +235,7 @@ export default function PortofoliuPage() {
                   <div className="flex flex-col lg:flex-row">
                     {/* Visual - Screenshot full width top on mobile, left on desktop */}
                     {project.image ? (
-                      <div className={`relative w-full lg:w-1/2 shrink-0 overflow-hidden img-hover-zoom ${i % 2 !== 0 ? 'lg:order-last lg:border-l lg:border-l-border' : 'lg:border-r lg:border-r-border'} border-b lg:border-b-0 border-border`}>
+                      <div className={`relative w-full lg:w-1/2 shrink-0 overflow-hidden ${i % 2 !== 0 ? 'lg:order-last lg:border-l lg:border-l-border' : 'lg:border-r lg:border-r-border'} border-b lg:border-b-0 border-border`}>
                         <div className="relative w-full" style={{ aspectRatio: '606/388' }}>
                           <Image
                             src={project.image}
