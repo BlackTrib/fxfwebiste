@@ -157,7 +157,7 @@ export default function DespreNoi() {
                   combină excelență tehnică cu strategie de business solidă.
                 </p>
                 <p className="text-muted-foreground text-sm leading-relaxed">
-                  Într-o piață dominat�� de promisiuni vagi, FXF se diferențiază prin transparență, 
+                  Într-o piață dominată de promisiuni vagi, FXF se diferențiază prin transparență, 
                   responsabilitate și rezultate concrete documentate.
                 </p>
               </div>
