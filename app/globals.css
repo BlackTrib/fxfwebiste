@@ -1,4 +1,10 @@
 @import 'tailwindcss';
+@layer theme {
+  @theme inline {
+    --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+    --font-mono: 'Courier New', monospace;
+  }
+}
 @import 'tw-animate-css';
 
 @custom-variant dark (&:is(.dark *));
@@ -352,4 +358,26 @@ body {
   0% { background-position: 0% center; }
   50% { background-position: 100% center; }
   100% { background-position: 0% center; }
+}
+
+/* Optimize for reduced motion - respects prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Hide animations on print */
+@media print {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
 }
