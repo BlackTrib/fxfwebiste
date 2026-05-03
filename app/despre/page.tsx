@@ -157,7 +157,7 @@ export default function DespreNoi() {
                   combină excelență tehnică cu strategie de business solidă.
                 </p>
                 <p className="text-muted-foreground text-sm leading-relaxed">
-                  Într-o piață dominată de promisiuni vagi, FXF se diferențiază prin transparență, 
+                  Într-o piață dominat�� de promisiuni vagi, FXF se diferențiază prin transparență, 
                   responsabilitate și rezultate concrete documentate.
                 </p>
               </div>
@@ -199,7 +199,7 @@ export default function DespreNoi() {
                 {stats.map((stat) => (
                   <div
                     key={stat.label}
-                    className="bg-card border border-border rounded-xl p-6 text-center hover:border-primary/20 transition-colors"
+                    className="bg-card border border-border rounded-xl p-6 text-center hover:border-primary/20 card-hover"
                   >
                     <p className="font-display text-4xl font-bold text-primary mb-1">{stat.number}</p>
                     <p className="font-semibold text-foreground text-sm mb-1">{stat.label}</p>
@@ -226,7 +226,7 @@ export default function DespreNoi() {
               {values.map((v) => {
                 const Icon = v.icon
                 return (
-                  <div key={v.title} className="bg-card border border-border rounded-xl p-6 hover:border-primary/20 transition-colors">
+                  <div key={v.title} className="bg-card border border-border rounded-xl p-6 hover:border-primary/20 card-hover">
                     <div className="w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
                       <Icon size={22} className="text-primary" />
                     </div>
@@ -255,7 +255,7 @@ export default function DespreNoi() {
             </div>
             <div className="grid md:grid-cols-3 gap-5">
               {team.map((member) => (
-                <div key={member.name} className="bg-card border border-border rounded-xl p-6 hover:border-primary/20 transition-colors">
+                <div key={member.name} className="bg-card border border-border rounded-xl p-6 hover:border-primary/20 card-hover">
                   <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary/15 to-accent-brand/15 flex items-center justify-center mb-4">
                     <Users size={24} className="text-primary" />
                   </div>

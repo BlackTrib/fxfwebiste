@@ -64,7 +64,7 @@ export function PortfolioPreview() {
         <div className="grid md:grid-cols-3 gap-4 mb-8">
           {projects.map((p, i) => (
             <Reveal key={p.name} direction="scale" delay={i * 100}>
-            <div className="group bg-card border border-border rounded-xl overflow-hidden hover:border-primary/30 hover:shadow-lg transition-all h-full">
+            <div className="group bg-card border border-border rounded-xl overflow-hidden hover:border-primary/30 card-hover h-full">
               {/* Result area */}
               <div className="bg-gradient-to-br from-secondary/80 to-secondary/50 p-5 relative">
                 <div className="text-center">

@@ -261,3 +261,95 @@ body {
 .reveal-stagger > .reveal:nth-child(6) { animation-delay: 500ms; }
 .reveal-stagger > .reveal:nth-child(7) { animation-delay: 600ms; }
 .reveal-stagger > .reveal:nth-child(8) { animation-delay: 700ms; }
+
+/* Card hover effects */
+.card-hover {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), 
+              box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -15px oklch(0.22 0.065 260 / 0.15),
+              0 8px 16px -8px oklch(0.22 0.065 260 / 0.1);
+}
+
+/* Glow hover for buttons */
+.glow-hover {
+  position: relative;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.glow-hover::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  background: linear-gradient(135deg, oklch(0.62 0.22 260), oklch(0.75 0.18 175));
+  border-radius: inherit;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.3s ease;
+  filter: blur(8px);
+}
+
+.glow-hover:hover::before {
+  opacity: 0.5;
+}
+
+.glow-hover:hover {
+  transform: translateY(-2px);
+}
+
+/* Image hover zoom */
+.img-hover-zoom {
+  overflow: hidden;
+}
+
+.img-hover-zoom img {
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.img-hover-zoom:hover img {
+  transform: scale(1.05);
+}
+
+/* Link underline animation */
+.link-hover {
+  position: relative;
+}
+
+.link-hover::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, oklch(0.62 0.22 260), oklch(0.75 0.18 175));
+  transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.link-hover:hover::after {
+  width: 100%;
+}
+
+/* Gradient text animation */
+.gradient-text-animate {
+  background: linear-gradient(
+    90deg,
+    oklch(0.62 0.22 260) 0%,
+    oklch(0.75 0.18 175) 50%,
+    oklch(0.62 0.22 260) 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-shift 3s ease infinite;
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% center; }
+  50% { background-position: 100% center; }
+  100% { background-position: 0% center; }
+}

@@ -230,12 +230,12 @@ export default function PortofoliuPage() {
               {projects.map((project, i) => (
                 <article
                   key={project.name}
-                  className="bg-card border border-border rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300"
+                  className="bg-card border border-border rounded-2xl overflow-hidden card-hover"
                 >
                   <div className="flex flex-col lg:flex-row">
                     {/* Visual - Screenshot full width top on mobile, left on desktop */}
                     {project.image ? (
-                      <div className={`relative w-full lg:w-1/2 shrink-0 overflow-hidden ${i % 2 !== 0 ? 'lg:order-last lg:border-l lg:border-l-border' : 'lg:border-r lg:border-r-border'} border-b lg:border-b-0 border-border`}>
+                      <div className={`relative w-full lg:w-1/2 shrink-0 overflow-hidden img-hover-zoom ${i % 2 !== 0 ? 'lg:order-last lg:border-l lg:border-l-border' : 'lg:border-r lg:border-r-border'} border-b lg:border-b-0 border-border`}>
                         <div className="relative w-full" style={{ aspectRatio: '606/388' }}>
                           <Image
                             src={project.image}

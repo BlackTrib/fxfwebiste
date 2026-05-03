@@ -295,7 +295,7 @@ export default function ServiciiPage() {
               {whyUs.map((item) => {
                 const Icon = item.icon
                 return (
-                  <div key={item.title} className="bg-white rounded-2xl p-6 border border-border">
+                  <div key={item.title} className="bg-white rounded-2xl p-6 border border-border card-hover">
                     <div className="w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
                       <Icon size={20} className="text-primary" />
                     </div>
