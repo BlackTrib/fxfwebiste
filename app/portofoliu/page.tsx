@@ -230,7 +230,7 @@ export default function PortofoliuPage() {
               {projects.map((project, i) => (
                 <article
                   key={project.name}
-                  className="bg-card border border-border rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300"
+                  className="bg-card border border-border rounded-2xl overflow-hidden card-hover"
                 >
                   <div className="flex flex-col lg:flex-row">
                     {/* Visual - Screenshot full width top on mobile, left on desktop */}

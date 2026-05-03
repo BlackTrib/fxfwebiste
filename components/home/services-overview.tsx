@@ -81,7 +81,7 @@ export function ServicesOverview() {
               direction="up"
               delay={i * 80}
               as="div"
-              className="group relative bg-card border border-border rounded-xl p-5 hover:border-primary/30 hover:shadow-lg transition-all"
+              className="group relative bg-card border border-border rounded-xl p-5 hover:border-primary/30 card-hover"
             >
               <Link href={s.href} className="flex flex-col h-full">
                 {s.popular && (
